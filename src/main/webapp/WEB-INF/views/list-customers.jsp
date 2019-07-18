@@ -43,10 +43,10 @@
 							</c:url>
 
 							<tr bgcolor="pink">
-								<td>${tempCustomer.User Id}</td>
-								<td>${tempCustomer.Account Number}</td>
-								<td>${tempCustomer.Login Password}</td>
-								<td>${tempCustomer.Transaction Password}</td>
+								<td>${tempCustomer.user_id}</td>
+								<td>${tempCustomer.acc_no}</td>
+								<td>${tempCustomer.log_pass}</td>
+								<td>${tempCustomer.trans_pass}</td>
 
 								<td>
 									<!-- display the update link --> <a href="${updateLink}">Update</a>

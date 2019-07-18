@@ -10,26 +10,36 @@
 </head>
 <body>
 
-<h3>CRM-WEB Application</h3>
+<h3>Banking Registration Form</h3>
+ <div class="container">
+<form:form action="saveCustomer" method="post" modelAttribute="customer">
+  <form:hidden path="acc_no" />
+    <h1>Register</h1>
+    <p>Please fill in this form to create an account.</p>
+    <hr>
 
-<div class="container">
-  <form:form action="saveCustomer" method="post" modelAttribute="customer">
-  <form:hidden path="id" />
-  
-    <label for="user_id">User Name</label><br><br>
-    <form:input path="user_id" placeholder="Your name.." /><br><br>
+    <label for="user_id"><b>User Id</b></label>
+    <input type="text" placeholder="Enter UserName" name="User Id" required>
 
-    <label for="log_pass">Login Password</label><br><br>
-    <form:password path="log_pass" /><br><br>
+    <label for="log_pass"><b>Login Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" required>
+
+    <label for="log_pass"><b>Repeat Login Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="password" required>
+    
+    <label for="trans_pass"><b>Transaction Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" required>
+
+    <label for="trans_pass"><b>Repeat Transaction Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="password" required>
+   
     
 
-    <label for="trans_pass">Transaction Password</label><br><br>
-    <form:input path="trans_pass" /> <br><br>
+    <div class="clearfix"/>
    
-
-    <form:button>Submit</form:button>
-  </form:form>
-</div>
-
+      <button type="submit" class="signupbtn">Register</button>
+      </form:form>
+    </div>
+  
 </body>
 </html>

@@ -9,9 +9,11 @@
 <link href="<c:url value="/resources/css/style.css"/>"rel="stylesheet">
 </head>
 <body>
-
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/valdiation.js"></script>
 <h3>Banking Registration Form</h3>
+
  <div class="container">
+
 <form:form action="saveCustomer" method="post" modelAttribute="customer">
   <form:hidden path="acc_no" />
     <h1>Register</h1>
@@ -19,19 +21,22 @@
     <hr>
 
     <label for="user_id"><b>User Id</b></label>
-    <input type="text" placeholder="Enter UserName" name="User Id" required>
+    <input type="text" placeholder="Enter UserName" name="user_id" required>
 
-    <label for="log_pass"><b>Login Password</b></label>
-    <input type="password" placeholder="Enter Password" name="password" required>
+    <label for="log_pass">Password</label>
+   <input type="password"  placeholder="Enter Login Pass"name="log_pass" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+ <br><br>
 
-    <label for="log_pass"><b>Repeat Login Password</b></label>
-    <input type="password" placeholder="Repeat Password" name="password" required>
+    <label for="c_pass"><b>Repeat Login Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="c_pass" required>
     
-    <label for="trans_pass"><b>Transaction Password</b></label>
-    <input type="password" placeholder="Enter Password" name="password" required>
+    <label for="trans_pass">Transaction Password</label>
+   <input type="password"  placeholder="Enter Transaction Pass"name="trans_pass" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+ <br><br>
 
-    <label for="trans_pass"><b>Repeat Transaction Password</b></label>
-    <input type="password" placeholder="Repeat Password" name="password" required>
+    <label for="ctrans_pass"><b>Repeat Transaction Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="ctrans_pass" required>
+    
    
     
 

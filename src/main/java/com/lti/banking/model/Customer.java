@@ -14,6 +14,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name="reg_bank")
 public class Customer {
+	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO,generator="custid_generator")
 	@SequenceGenerator(name="custid_generator", sequenceName="acc_no1",allocationSize=1)

@@ -22,7 +22,7 @@
   <a href="${fundtransfer}">Fund Transfer</a>
   <a href="#">Account Statement</a>
 </div>
- 
+
     <center>
      <center>
 <table style="width:65%">
@@ -30,7 +30,7 @@
     <th>${usr.acc_no}</th>
     <th>${usr.user_id}</th>
     <th>Savings Account</th>
-     <th>${param.dept}<br></th>
+    <th><%=request.getParameter("dept") %><br></th>
   </tr>
   </table>
   <br>

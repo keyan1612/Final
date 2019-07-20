@@ -11,6 +11,8 @@
 <body background="<c:url value="/resources/images/LTI.jpg"/>"/>
 </head>
 <body>
+<jsp:forward page="welcome.jsp"> 
+<jsp:param name="dept" value="${tempCustomer.dept}" /> 
 <h2>Account Details</h2>
 <hr color="pink" size="3" />
 <img src="<c:url value="/resources/images/logo.jpg"/>"/>

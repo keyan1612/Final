@@ -9,7 +9,7 @@
 <link href="<c:url value="/resources/css/style.css"/>"rel="stylesheet">
 </head>
 <body>
-<%@ include file="welcome.jsp" %>
+
 <h2>Open A Savings Account</h2>
 <h3>Personal Details</h3>
 <div class="container">
@@ -21,6 +21,7 @@
             <option>Mr.</option> 
             <option>Mrs.</option>  
         </select></p><br>
+ 
     <label for="fname">First Name</label>
     <input type="text" name="fname" required>
 

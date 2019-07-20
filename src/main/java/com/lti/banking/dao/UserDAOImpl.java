@@ -10,7 +10,7 @@ import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-
+import com.lti.banking.model.Account;
 import com.lti.banking.model.User;
 @Repository
 public class UserDAOImpl implements UserDAO {
@@ -33,6 +33,7 @@ public class UserDAOImpl implements UserDAO {
 						cb.equal(root.get("log_pass"),theUser.getLog_pass())
 					));
 				
+				
 				Query query = session.createQuery(cq);
 				query.setMaxResults(1);
 				usr=(User) query.getSingleResult();
@@ -47,6 +48,11 @@ public class UserDAOImpl implements UserDAO {
 				
 				return usr;
 			}
+
+	public Account checkAccount(int acno) {
+		
+		return null;
+	}
 
 	
 	}

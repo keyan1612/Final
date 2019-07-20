@@ -9,6 +9,6 @@ public interface AccountService {
 
 	public List<Account> getAccounts();
 	
-	public Account getAccount(int theId);
+	
 
 }

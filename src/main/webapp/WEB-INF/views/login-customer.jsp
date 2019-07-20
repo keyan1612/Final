@@ -8,7 +8,7 @@
 <title>Login | CRM</title>
 
 
-<link href="<c:url value="/resources/css/search.css" />"
+<link href="<c:url value="/resources/css/fund.css" />"
  rel="stylesheet">
 </head>
 <body background="<c:url value="/resources/images/LTI2.jpg"/>"/>
@@ -23,15 +23,10 @@
     <br><br>
 
     <label for="log_pass">Password</label>
-   <input type="password"  name="log_pass" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
- <br><br>
-    <input type="submit" value="Submit">
+   <input type="password"  name="log_pass">
+    <center> <input type="submit" value="Proceed">
     <div id="message">
-  <h3>Password must contain the following:</h3>
-  <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
-  <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
-  <p id="number" class="invalid">A <b>number</b></p>
-  <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+  
 </div>
   </form:form>
 </div>

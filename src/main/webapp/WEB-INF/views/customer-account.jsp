@@ -9,61 +9,89 @@
 <link href="<c:url value="/resources/css/style.css"/>"rel="stylesheet">
 </head>
 <body>
+<%@ include file="welcome.jsp" %>
+<h2>Open A Savings Account</h2>
+<h3>Personal Details</h3>
+<div class="container">
+  <form:form action="saveCustomers" method="post" modelAttribute="account">
+   <p>Title *    
+        <select type="text" value="" name="subject"> 
+            <option></option>
+            <option>Ms.</option> 
+            <option>Mr.</option> 
+            <option>Mrs.</option>  
+        </select></p><br>
+    <label for="fname">First Name</label>
+    <input type="text" name="fname" required>
 
-<h3>Banking Registration Form</h3>
- <div class="container">
-<form:form action="saveCustomers" method="post" modelAttribute="account">
-  
-    <h1>Register</h1>
-    <p>Please fill in this form to create an account.</p>
-    <hr>
-
-    <label for="fname"><b>First Name</b></label>
-    <input type="text" placeholder="Enter First Name" name="fname" required>
-
-    <label for="mname"><b>Middle Name</b></label>
-    <input type="text" placeholder="Enter Middle Name" name="mname" required>
-
-    <label for="lname"><b>Last Name</b></label>
-    <input type="text" placeholder="Enter Last Name" name="lname" required>
-    
-    <label for="fathername"><b>Father's Name</b></label>
-    <input type="text" placeholder="Enter Father's Name" name="fathername" required>
-
-    <label for="mobno"><b>Mobile Number</b></label>
-    <input type="text" placeholder="Enter Mobile Number" name="mobno" required>
+    <label for="mname">Middle Name</label>
+   <input type="text"  name="mname">
    
-    <label for="email_id"><b>Email ID</b></label>
-    <input type="text" placeholder="Enter email id" name="email_id" required>
-    
-     <label for="aadhar_no"><b>Aadhar No</b></label>
-    <input type="text" placeholder="Enter aadhar no" name="aadhar_no" required>
-    
-    
+    <label for="lname">Last Name</label>
+   <input type="text"  name="lname" required>
+   
+    <label for="faname">Father's Name</label>
+   <input type="text"  name="faname" required>
+   
+    <label for="mobno">Mobile Number</label>
+   <input type="text"  name="mobno" required>
+   
+    <label for="eid">Email ID</label>
+   <input type="text"  name="eid" required>
+   
+    <label for="aadhar">Aadhar Number</label>
+   <input type="text"  name="aadhar" required>
+   
 <div class="col">
                     <label for="dob">Date of Birth</label>
                     <input type="date" onload="getDate()" class="form-control" id="dob" 
                       name="dob">
                 </div><br><br>
    
-    
-    <label for="occtype"><b>Occupation Type</b></label>
-    <input type="text" placeholder="Enter Occupation Type" name="occtype" required>
-    
-    
-       <label for="sincome"><b>Source of Income</b></label>
-    <input type="text" placeholder="Enter Source of income" name="sincome" required>
-    
-       <label for="gincome"><b>Gross Annual Income</b></label>
-    <input type="text" placeholder="Enter Gross Annual Income" name="gincome" required>
-    
-       
-
-    <div class="clearfix"/>
    
-      <button type="submit" class="signupbtn">Register</button>
-      </form:form>
-    </div>
-  
+   <label for="address">Address</label>
+   <input type="text"  name="address" required>
+   
+    <h3> Occupation Details </h3>
+ 
+    <p>a)Occupation Type*     -   <select type="text" value="" name="occtype" required> 
+           <option></option>
+            <option>Business</option> 
+            <option>Agriculture</option> 
+            <option>Student</option>  
+           </select></p>
+    <p>b)Source of Income*  - <select type="text" value="" name="sincome" required> 
+     <option></option>
+            <option>Business</option> 
+            <option>Agriculture</option> 
+            <option>Student</option>  
+           </select></p>
+    <p>c)Gross Annual Income*  - <select type="text" value="" name="gincome" required>
+     <option></option>
+            <option>Business</option> 
+            <option>Agriculture</option> 
+            <option>Student</option>  
+           </select></p>
+           <br>
+           
+            <h3> Deposit </h3>
+            <br>
+             <label for="dept">Initial Deposit</label>
+   <input type="text"  name="dept" required>
+            
+    <p>Debit/ATM Card </p>
+    <p>Do you want a debit card ? </p>
+   
+     
+ <input type="checkbox" > Opt for Net banking<br>
+      <input type="checkbox" > I agree<br>
+      
+      
+    
+ 
+ <center> <input type="submit" value="Submit"> </center> 
+</form:form>
+
+
 </body>
 </html>

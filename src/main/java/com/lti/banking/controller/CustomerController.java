@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.lti.banking.model.Customer;
 import com.lti.banking.service.CustomerService;
@@ -36,6 +37,11 @@ public class CustomerController {
 		List<Customer> theCustomers=customerService.getCustomers();
 		theModel.addAttribute("customers",theCustomers);
 		return "list-customers";
+	}
+	@GetMapping("/delete")
+	public String deleteCustomer(@RequestParam("CustomerId") int theId) {
+		customerService.deleteCustomer(theId);
+		return "redirect:/customer/list";
 	}
 
 	

@@ -31,12 +31,31 @@
 
 						<!-- loop over and print our customers -->
 						<c:forEach var="tempCustomer" items="${customers}">
+						
+						
+						<!-- construct an "update" link with customer id -->
+							<c:url var="addLink" value="/customer/addForm">
+								<c:param name="CustomerId" value="${tempCustomer.acc_no}" />
+							</c:url>
+
+							<!-- construct an "delete" link with customer id -->
+							<c:url var="deleteLink" value="/customer/delete">
+								<c:param name="CustomerId" value="${tempCustomer.acc_no}" />
+							</c:url>
+						
 
 							<tr bgcolor="yellow">
 								<td>${tempCustomer.user_id}</td>
 								<td>${tempCustomer.acc_no}</td>
 								<td>${tempCustomer.log_pass}</td>
 								<td>${tempCustomer.trans_pass}</td>
+								
+								
+								<td >
+									<!-- display the update link --> <a href="${AddLink}">Add</a>
+									| <a href="${deleteLink}"
+									onclick="if (!(confirm('Are you sure you want to delete this Customer detail ?'))) return false">Delete</a>
+								</td>
 
 								
 

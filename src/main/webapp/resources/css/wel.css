@@ -1,0 +1,59 @@
+.vertical-menu {
+  width: 100px;
+}
+
+.vertical-menu a {
+  background-color: #eee;
+  color: black;
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+}
+
+.vertical-menu a:hover {
+  background-color: #ccc;
+}
+
+.vertical-menu a.active {
+  background-color: orange;
+  color: white;
+}
+
+table, th, td,select {
+  border: 10px solid black;
+  border-collapse: collapse;
+}
+th, td,select {
+  padding: 15px;
+  text-align: left;    
+}
+
+input[type=submit] {
+  width: 15%;
+  background-color: darkorange;
+  border: none;
+  color: white;
+  padding: 15px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+  margin: 2px 2px;
+  cursor: pointer;
+
+}
+
+valid {
+  color: green;
+}
+
+.valid:before {
+  position: relative;
+  left: -35px;
+  content: "&#10004;";
+}
+
+.center {
+  text-align: center;
+  border: 3px solid green;
+}

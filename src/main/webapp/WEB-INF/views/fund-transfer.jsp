@@ -26,7 +26,7 @@
     <input type="text" name="amt" required>
     
     <div class="col">
-                    <label for="trans_date">Date</label>
+                    <label for="date">Date</label>
                     <input type="text" value=<%= new SimpleDateFormat("dd/MM/yyyy HH:mm:ss").format(new java.util.Date())%> class="form-control" id="date" 
                       name="date">
                 </div>

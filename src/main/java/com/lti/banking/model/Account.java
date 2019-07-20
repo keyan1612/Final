@@ -6,8 +6,13 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="open_acc")
+@Table(name="acc")
 public class Account {
+	
+	
+	@Column(name="subject")
+	private String subject;
+	
 	@Column(name="fname")
 	private String fname;
 	
@@ -17,18 +22,23 @@ public class Account {
 	@Column(name="lname")
 	private String lname;
 	
-	@Column(name="fathername")
-	private String fathername;
+	@Column(name="faname")
+	private String faname;
 	
 	@Id
 	@Column(name="mobno")
 	private String mobno;
 	
-    @Column(name="email_id")
-	private String email_id;
+	
+	@Column(name="eid")
+	private String eid;
+	
+    @Column(name="aadhar")
+   	private String aadhar;
     
-    @Column(name="aadhar_no")
-   	private String aadhar_no;
+    @Column(name="address")
+   	private String address;
+    
     
     @Column(name="dob")
    	private String dob;
@@ -41,6 +51,17 @@ public class Account {
     
     @Column(name="gincome")
    	private String gincome;
+    
+    @Column(name="dept")
+   	private String dept;
+
+	public String getSubject() {
+		return subject;
+	}
+
+	public void setSubject(String subject) {
+		this.subject = subject;
+	}
 
 	public String getFname() {
 		return fname;
@@ -66,12 +87,12 @@ public class Account {
 		this.lname = lname;
 	}
 
-	public String getFathername() {
-		return fathername;
+	public String getFaname() {
+		return faname;
 	}
 
-	public void setFathername(String fathername) {
-		this.fathername = fathername;
+	public void setFaname(String faname) {
+		this.faname = faname;
 	}
 
 	public String getMobno() {
@@ -82,20 +103,28 @@ public class Account {
 		this.mobno = mobno;
 	}
 
-	public String getEmail_id() {
-		return email_id;
+	public String getEid() {
+		return eid;
 	}
 
-	public void setEmail_id(String email_id) {
-		this.email_id = email_id;
+	public void setEid(String eid) {
+		this.eid = eid;
 	}
 
-	public String getAadhar_no() {
-		return aadhar_no;
+	public String getAadhar() {
+		return aadhar;
 	}
 
-	public void setAadhar_no(String aadhar_no) {
-		this.aadhar_no = aadhar_no;
+	public void setAadhar(String aadhar) {
+		this.aadhar = aadhar;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
 	}
 
 	public String getDob() {
@@ -130,23 +159,23 @@ public class Account {
 		this.gincome = gincome;
 	}
 
+	public String getDept() {
+		return dept;
+	}
+
+	public void setDept(String dept) {
+		this.dept = dept;
+	}
+
 	@Override
 	public String toString() {
-		return "Account [fname=" + fname + ", mname=" + mname + ", lname=" + lname + ", fathername=" + fathername
-				+ ", mobno=" + mobno + ", email_id=" + email_id + ", aadhar_no=" + aadhar_no + ", dob=" + dob
-				+ ", occtype=" + occtype + ", sincome=" + sincome + ", gincome=" + gincome + "]";
+		return "Account [subject=" + subject + ", fname=" + fname + ", mname=" + mname + ", lname=" + lname
+				+ ", faname=" + faname + ", mobno=" + mobno + ", eid=" + eid + ", aadhar=" + aadhar + ", address="
+				+ address + ", dob=" + dob + ", occtype=" + occtype + ", sincome=" + sincome + ", gincome=" + gincome
+				+ ", dept=" + dept + "]";
 	}
-    
-    
-    
-    
-    
-    
-    
-    
-	
-	
-	
-	
-	
+
+
+
 }
+

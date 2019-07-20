@@ -21,6 +21,7 @@
 				<h3 align=center>Account List</h3>
 				<table border=1   align=center>
 						<tr>
+							<th>Subject</th>
 							<th>First Name</th>
 							<th>Middle Name</th>
 							<th>Last Name</th>
@@ -32,26 +33,36 @@
 							<th>Occupation Type</th>
 							<th>Source of Income</th>
 							<th>Gross Annual Income</th>
+							<th>Address</th>
+							<th>Deposit</th>
+							
 						
 							
 						</tr>
 
 						<!-- loop over and print our customers -->
 						<c:forEach var="tempCustomer" items="${accounts}">
+						
+						
+						
+						
 
 							<tr bgcolor="pink">
+							     <td>${tempCustomer.subject}</td>
 								<td>${tempCustomer.fname}</td>
 								<td>${tempCustomer.mname}</td>
 								<td>${tempCustomer.lname}</td>
-								<td>${tempCustomer.fathername}</td>
+								<td>${tempCustomer.faname}</td>
 								<td>${tempCustomer.mobno}</td>
-								<td>${tempCustomer.email_id}</td>
-								<td>${tempCustomer.aadhar_no}</td>
+								<td>${tempCustomer.eid}</td>
+								<td>${tempCustomer.aadhar}</td>
 								<td>${tempCustomer.dob}</td>
 								<td>${tempCustomer.occtype}</td>
 								<td>${tempCustomer.sincome}</td>
 								<td>${tempCustomer.gincome}</td>
-							
+								<td>${tempCustomer.address}</td>
+								<td>${tempCustomer.dept}</td>
+							   
 
 								
 

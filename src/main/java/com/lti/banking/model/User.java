@@ -19,7 +19,8 @@ public class User {
 	
 	@Id
 	@Column(name="acc_no")
-	private int acc_no;
+	private String acc_no;
+
 
 	public String getUser_id() {
 		return user_id;
@@ -40,17 +41,18 @@ public class User {
 		this.log_pass = encodedString;
 	}
 
-	public int getAcc_no() {
+	public String getAcc_no() {
 		return acc_no;
 	}
 
-	public void setAcc_no(int acc_no) {
+	public void setAcc_no(String acc_no) {
 		this.acc_no = acc_no;
 	}
+
+	
 
 	@Override
 	public String toString() {
 		return "User [user_id=" + user_id + ", log_pass=" + log_pass + ", acc_no=" + acc_no + "]";
-	}
-	
+	}	
 }

@@ -19,10 +19,17 @@ public class Customer {
 	@GeneratedValue(strategy=GenerationType.AUTO,generator="custid_generator")
 	@SequenceGenerator(name="custid_generator", sequenceName="acc_no1",allocationSize=1)
 	@Column(name="acc_no",updatable=false,nullable=false)
-	private int acc_no;
+	private String acc_no;
 	
 	
 
+	public String getAcc_no() {
+		return acc_no;
+	}
+
+	public void setAcc_no(String acc_no) {
+		this.acc_no = acc_no;
+	}
 	@Column(name="user_id")
 	private String user_id;
 	
@@ -34,12 +41,7 @@ public class Customer {
      public Customer() {
 	 
  }
-	public int getAcc_no() {
-		return acc_no;
-	}
-	public void setAcc_no(int acc_no) {
-		this.acc_no = acc_no;
-	}
+	
 	public String getUser_id() {
 		return user_id;
 	}
@@ -65,10 +67,11 @@ public class Customer {
 		String encodedString=encoder.encodeToString(normalString.getBytes(StandardCharsets.UTF_8));
 		this.trans_pass = encodedString;
 	}
+
 	@Override
 	public String toString() {
 		return "Customer [acc_no=" + acc_no + ", user_id=" + user_id + ", log_pass=" + log_pass + ", trans_pass="
 				+ trans_pass + "]";
 	}
-
+	
 }

@@ -25,10 +25,7 @@ public class AccountServiceImpl implements AccountService {
 	return accountDAO.getAccounts();
 	}
    
-   @Transactional
-public Account getAccount(int theId) {
-	return accountDAO.getAccount(theId);
-}
+ 
 
 
 

@@ -33,7 +33,6 @@ public class UserDAOImpl implements UserDAO {
 						cb.equal(root.get("log_pass"),theUser.getLog_pass())
 					));
 				
-				
 				Query query = session.createQuery(cq);
 				query.setMaxResults(1);
 				usr=(User) query.getSingleResult();
@@ -49,9 +48,33 @@ public class UserDAOImpl implements UserDAO {
 				return usr;
 			}
 
-	public Account checkAccount(int acno) {
+	
+	
+	
+	@Autowired
+	SessionFactory sessionFactory1;
+	public Account checkAccount(Account acno) {
+		Account usr=null;
+		Session session=null;
+		try {
+			session = sessionFactory1.getCurrentSession();
+			CriteriaBuilder cb=session.getCriteriaBuilder();
+			 CriteriaQuery<Account> cq=cb.createQuery(Account.class);
+			 Root<Account> root=cq.from(Account.class);
+			//cq.select(root.get("id"));
+				cq.select(root).where(
+						cb.equal(root.get("dept"),acno.getDept()));
+			}
+
+		catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if (session != null) {
+				//session.close();
+			}
+		}
+		return usr;
 		
-		return null;
 	}
 
 	

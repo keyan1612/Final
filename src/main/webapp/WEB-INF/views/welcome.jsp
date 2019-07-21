@@ -30,7 +30,7 @@
     <th>${usr.acc_no}</th>
     <th>${usr.user_id}</th>
     <th>Savings Account</th>
-    <th><%=request.getParameter("dept") %><br></th>
+     <th>${ac.acc_no}</th>
   </tr>
   </table>
   <br>

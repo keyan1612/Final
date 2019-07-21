@@ -12,7 +12,7 @@ import org.springframework.web.servlet.ModelAndView;
 import com.lti.banking.model.Account;
 import com.lti.banking.model.User;
 import com.lti.banking.service.UserService;
-import com.lti.banking.service.AccountService;
+
 @Controller
 @RequestMapping("/user")
 public class LoginController {
@@ -37,7 +37,7 @@ public ModelAndView processLogin(@ModelAttribute("user") User theUser) {
 		model = new ModelAndView("login-customer");
 		model.addObject("error", "Invalid Username or Password");
 	} else {
-		int acno=theUser.getAcc_no();
+	String acno=theUser.getAcc_no();
 		Account ac=accountService.checkAccount(acno);
 		model = new ModelAndView("welcome");
 		model.addObject("usr", usr);
